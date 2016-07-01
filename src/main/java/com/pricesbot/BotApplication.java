@@ -18,11 +18,6 @@ public class BotApplication
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(BotApplication.class, args);
-
-
-
-
-
     }
 }
 
