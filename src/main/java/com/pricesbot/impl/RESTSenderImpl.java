@@ -49,8 +49,8 @@ public class RESTSenderImpl implements RESTSender
         headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
 
         HttpEntity<String> entity = new HttpEntity<String>(request,headers);
-
-        ResponseEntity<String> response = restTemplate.exchange(TelegramBotConstant.URL_SERVER + "/input/", HttpMethod.POST, entity, String.class);
+        System.out.println(entity.getBody());
+        ResponseEntity<String> response = restTemplate.exchange(TelegramBotConstant.URL_SERVER + "/price", HttpMethod.POST, entity, String.class);
 
         return response.getBody();
 
