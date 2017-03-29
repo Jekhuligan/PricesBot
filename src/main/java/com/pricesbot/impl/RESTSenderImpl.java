@@ -50,7 +50,7 @@ public class RESTSenderImpl implements RESTSender
 
         HttpEntity<String> entity = new HttpEntity<String>(request,headers);
         System.out.println(entity.getBody());
-        ResponseEntity<String> response = restTemplate.exchange(TelegramBotConstant.URL_SERVER + "/price", HttpMethod.POST, entity, String.class);
+        ResponseEntity<String> response = restTemplate.exchange(TelegramBotConstant.URL_SERVER + "api/v1/price-core/price", HttpMethod.POST, entity, String.class);
 
         return response.getBody();
 
